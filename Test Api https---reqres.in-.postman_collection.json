@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "60798a97-8af7-48b8-9867-ef8a5ec54c01",
+		"name": "Test Api https://reqres.in/",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30904755"
+	},
+	"item": [
+		{
+			"name": "Список пользователей",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{reqresurl}}{{reqresURN}}?page=2",
+					"host": [
+						"{{reqresurl}}{{reqresURN}}"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Пользователь 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{reqresurl}}{{reqresURN}}/2",
+					"host": [
+						"{{reqresurl}}{{reqresURN}}"
+					],
+					"path": [
+						"2"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Пользователь 12",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{reqresurl}}{{reqresURN}}/12",
+					"host": [
+						"{{reqresurl}}{{reqresURN}}"
+					],
+					"path": [
+						"12"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Пользователь 0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{reqresurl}}{{reqresURN}}/0",
+					"host": [
+						"{{reqresurl}}{{reqresURN}}"
+					],
+					"path": [
+						"0"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Пользователь 13",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{reqresurl}}{{reqresURN}}/13",
+					"host": [
+						"{{reqresurl}}{{reqresURN}}"
+					],
+					"path": [
+						"13"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создать пользователя",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"leader\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{reqresurl}}{{reqresURN}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Изменить пользователя UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"zion resident\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{reqresurl}}{{reqresURN}}/2"
+			},
+			"response": []
+		},
+		{
+			"name": "(РНП)Регистрация нового пользвователя",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{reqresurl}}{{reqresRegister_URN}}"
+			},
+			"response": []
+		},
+		{
+			"name": "(РНП) пустой pswd",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{reqresurl}}{{reqresRegister_URN}}"
+			},
+			"response": []
+		},
+		{
+			"name": "(РНП) пустой email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"\",\r\n    \"password\": \"pswd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{reqresurl}}{{reqresRegister_URN}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Вход в систему Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"cityslicka\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{reqresurl}}{{reqresLogin_URN}}"
+			},
+			"response": []
+		},
+		{
+			"name": "Вход в систему Login Без пароля",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{reqresurl}}{{reqresLogin_URN}}"
+			},
+			"response": []
+		}
+	]
+}
